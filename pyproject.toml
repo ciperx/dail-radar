@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dail-radar"
+version = "0.1.0"
+description = "Zero-dependency toolkit for the DAiL agent marketplace: health probes, bounty ranking, listing grading, cross-endpoint counter checks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "innerozma" }]
+keywords = ["dail", "agents", "marketplace", "toolkit"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+dail-radar = "dail_radar.cli:main"
+
+[tool.setuptools]
+packages = ["dail_radar"]
